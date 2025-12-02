@@ -1,6 +1,6 @@
 # Unpackr Changelog
 
-## [Performance Improvements] - {PR_MERGE_DATE}
+## [Performance Improvements] - 2025-12-02
 
 - Process up to 2 ZIP files simultaneously for faster extraction
 - Use memory-efficient streaming to handle millions of files without loading all into memory

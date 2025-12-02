@@ -187,7 +187,7 @@ async function extractZip(zipPath: string, extractDir: string, safeMode = true):
               if (ratio > 100) {
                 zipfile.close();
                 throw new Error(
-                  `Zip Bomb detected: File ${entry.fileName} has suspicious compression ratio (${ratio.toFixed(0)}x)`
+                  `Zip Bomb detected: File ${entry.fileName} has suspicious compression ratio (${ratio.toFixed(0)}x)`,
                 );
               }
             }
@@ -440,7 +440,7 @@ async function processFilesFromDirectory(
   outputDir: string,
   knownHashes: Map<string, string>,
   stats: ProcessStats,
-  isGooglePhotos: boolean
+  isGooglePhotos: boolean,
 ): Promise<void> {
   // Use generator to iterate files one by one to save memory
   for await (const srcPath of getAllFilesGenerator(sourceDir)) {
